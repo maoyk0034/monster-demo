@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom-dark">
+    <!-- 移动端汉堡菜单按钮 -->
+    <button class="navbar-toggler ms-auto me-3 my-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav me-auto w-100 justify-content-between">
+            <!-- 导航项：Home (当前激活状态) -->
+            <li class="nav-item">
+                <a class="nav-link active px-4" aria-current="page" href="#">Home</a>
+            </li>
+            <!-- 导航项：About Us (包含三级下拉菜单) -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle px-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    About Us
+                </a>
+                <!-- 二级菜单 -->
+                <ul class="dropdown-menu bg-custom-dark border-0" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item text-white" href="#">Company</a></li>
+                    <!-- 三级菜单容器 -->
+                    <li class="dropdown-submenu position-relative">
+                        <a class="dropdown-item dropdown-toggle text-white" href="#">Team</a>
+                        <!-- 三级菜单内容 -->
+                        <ul class="dropdown-menu bg-custom-dark border-0 submenu">
+                            <li><a class="dropdown-item text-white" href="#">Developers</a></li>
+                            <li><a class="dropdown-item text-white" href="#">Designers</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="dropdown-item text-white" href="#">Careers</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-4" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-4" href="#">Solutions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-4" href="#">Case Studies</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-4" href="#">Get a Quote</a>
+            </li>
+        </ul>
+    </div>
+</nav>

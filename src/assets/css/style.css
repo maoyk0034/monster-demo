@@ -1,0 +1,362 @@
+/* ==========================================================================
+   全局通用样式 (Global Styles)
+   ========================================================================== */
+body {
+    /* 使用木纹素材平铺整个背景 */
+    background: url('/src/assets/images/ogMs_bg.jpg') repeat;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* 自定义蓝色链接颜色，用于多处文本高亮 */
+.text-primary {
+    color: #4a90e2 !important;
+}
+
+/* ==========================================================================
+   1. 头部区域 (Header Section)
+   ========================================================================== */
+.header-section {
+    padding-top: 30px;
+}
+
+/* Logo 文本样式 */
+.logo-text {
+    line-height: 1;
+}
+
+.logo-title {
+    font-size: 24px;
+    font-weight: 900;
+    color: #ff8c00;
+    letter-spacing: 1px;
+}
+
+.logo-subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff8c00;
+}
+
+/* 搜索框容器及输入框样式 */
+.search-box {
+    position: relative;
+    width: 250px;
+    max-width: 100%;
+}
+
+.search-box input {
+    background-color: #2a1b14 !important;
+    color: #fff !important;
+    border-radius: 20px;
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+    height: 30px;
+    font-size: 14px;
+}
+
+/* 搜索框内的放大镜图标 */
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 12px;
+}
+
+/* 搜索框内的清除图标 */
+.clear-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   2. 导航栏区域 (Navigation Section)
+   ========================================================================== */
+.nav-container {
+    padding: 0;
+}
+
+/* 导航栏背景：深黑褐色 */
+.bg-custom-dark {
+    background-color: #221611 !important;
+}
+
+.navbar {
+    padding: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* 一级导航链接默认样式 */
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 14px;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 一级导航链接悬停及激活状态（橙色背景，深色文字） */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: #ff8c00 !important;
+    color: #221611 !important;
+}
+
+/* ----- 下拉菜单 (Dropdown) 样式 ----- */
+.dropdown-menu {
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 10px 20px;
+    border-bottom: 1px solid #332219; /* 菜单项之间的分隔线 */
+}
+
+/* 下拉菜单项悬停状态 */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #ff8c00;
+    color: #221611 !important;
+}
+
+/* ----- 三级菜单 (Submenu) 特定样式 ----- */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .submenu {
+    display: none;
+    position: absolute;
+    left: 100%; /* 在二级菜单右侧展开 */
+    top: 0;
+    margin-top: -1px;
+}
+
+/* PC 端：鼠标悬停时展示三级菜单 */
+@media (min-width: 992px) {
+    .dropdown-submenu:hover .submenu {
+        display: block;
+    }
+}
+
+/* 移动端/平板端：三级菜单行为重写 (由 JS 控制展示，取消绝对定位) */
+@media (max-width: 991px) {
+    .dropdown-submenu .submenu {
+        position: static;
+        display: none;
+        padding-left: 20px; /* 移动端子菜单缩进 */
+    }
+    .dropdown-submenu.open .submenu {
+        display: block;
+    }
+}
+
+/* ==========================================================================
+   3. 轮播图区域 (Carousel Section)
+   ========================================================================== */
+.carousel-container {
+    padding: 0;
+}
+
+/* 底部指示器位置及样式 */
+.carousel-indicators {
+    bottom: 10px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #fff;
+    opacity: 0.5;
+}
+
+.carousel-indicators button.active {
+    opacity: 1;
+}
+
+/* 左右切换箭头按钮样式（白色圆底黑箭头） */
+.custom-carousel-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #000;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 1; /* 保持按钮始终不透明 */
+}
+
+/* ==========================================================================
+   4. 主体内容区域 (Main Content Section)
+   ========================================================================== */
+.main-content {
+    background-color: rgba(34, 22, 17, 0.9); /* 深色半透明背景，透过木纹 */
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* 右侧内容标题颜色 */
+.orange-text {
+    color: #ff8c00;
+}
+
+/* "Click Me" 蓝色渐变按钮 */
+.custom-btn {
+    background: linear-gradient(to bottom, #4a90e2, #2b6cb0);
+    border: none;
+    padding: 8px 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.custom-btn:hover {
+    background: linear-gradient(to bottom, #5ba1f3, #3c7dc1);
+}
+
+/* ==========================================================================
+   5. 底部区域 (Footer Section)
+   ========================================================================== */
+.footer-section {
+    /* 亮橙色渐变背景 */
+    background: linear-gradient(to bottom, #ffa71a, #ff8c00);
+    border-top: 5px solid #e67e22; /* 顶部深色边框 */
+    padding-bottom: 20px;
+    margin-top: 40px; /* 与上方内容区留出间隙 */
+}
+
+/* 底部链接列表样式 */
+.footer-links h6 {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* ----- Twitter 气泡及怪物特效 ----- */
+.twitter-section-wrapper {
+    position: absolute;
+    right: 15px;
+    bottom: -15px; /* 将整个容器放在底部区域内 */
+    width: 350px;
+    height: 180px;
+}
+
+.twitter-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.speech-bubble {
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    border: 3px solid #fff;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    background-color: #fff;
+    width: 240px;
+    z-index: 5;
+}
+
+/* 气泡指向右下方的小尾巴 */
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    right: 20px;
+    border-width: 15px 25px 0 0;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+.twitter-birds .bird {
+    line-height: 1.2;
+}
+
+/* 右下角怪物定位 */
+.footer-monster {
+    position: absolute;
+    bottom: -10px; /* 紧贴底部并稍微向下溢出一点 */
+    right: 45px; /* 向左移动 */
+    z-index: 10;
+}
+
+.monster-img {
+    width: 80px;
+    height: auto;
+}
+
+/* 版权声明文字 */
+.copyright-text {
+    color: #555 !important;
+}
+
+/* ==========================================================================
+   6. 响应式微调 (Responsive Adjustments)
+   ========================================================================== */
+@media (max-width: 991px) {
+    /* 平板和手机端：调整底部 Twitter 区域的位置，避免重叠 */
+    .twitter-section-wrapper {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        margin-top: 30px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .twitter-section {
+        width: 320px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 手机端搜索框左对齐并增加上边距 */
+    .search-container {
+        text-align: left !important;
+        margin-top: 15px;
+    }
+
+    /* 手机端底部链接块增加下边距 */
+    .footer-links {
+        margin-bottom: 20px;
+    }
+
+    /* 手机端缩小怪物区域缩放比例防止撑破屏幕 */
+    .twitter-section {
+        transform: scale(0.9);
+        transform-origin: center;
+    }
+}
